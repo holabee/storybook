@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Storybook for React tutorial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+storybookÀº ºñÁî´Ï½º ·ÎÁ÷°ú ÄÁÅØ½ºÆ®·ÎºÎÅÍ UI Component¸¦ µ¶¸³ÀûÀ¸·Î ºÐ¸®ÇÏ¿© ¸¸µé ¼ö ÀÖ´Ù.
 
-## Available Scripts
+## Setup React Storybook
 
-In the project directory, you can run:
+°³¹ß È¯°æ¿¡¼­ ÇÊµå ÇÁ·Î¼¼½º¸¦ ¼³Á¤ÇÏ±â À§ÇØ¼­´Â CRA¸¦ »ç¿ëÇÏ¿© ºôµå ½Ã½ºÅÛÀ» ¼³Á¤ÇÏ°í storybook°ú jest Å×½ºÆ® ¾Û¿¡¼­ È°¼ºÈ­ÇØ¾ß ÇÑ´Ù.
 
-### `npm start`
+> yarn À» »ç¿ëÇÒ °æ¿ì yarn ¿¡ ¸Â°Ô ¼öÁ¤ÇÏ¿© ÁøÇàÇÏ¸é µÊ!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+# Create our application:
+npx create-react-app test-storybook
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+cd test-storybook
 
-### `npm test`
+# Add Storybook:
+npx -p @storybook/cli sb init
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run the test runner (Jest) in a terminal:
+npm test --watchAll
 
-### `npm run build`
+# Start the component explorer on port 6006:
+npm run storybook
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Run the frontend app proper on port 3000:
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> Å×½ºÆ® ¸í·É¾î¿¡ --watchAll ÇÃ·¡±×°¡ Ãß°¡µÈ °ÍÀ» º¸¼ÌÀ» ¼ö ÀÖ´Ù. ÀÌ°ÍÀº ÀÇµµÀûÀÎ °ÍÀ¸·Î, ÀÌ ´öºÐ¿¡ ¸ðµç Å×½ºÆ®°¡ ½ÇÇàµÇ°í ¾ÖÇÃ¸®ÄÉÀÌ¼ÇÀÌ Á¤»óÀÓÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## GraphQL°ú React Æ©Åä¸®¾ó [¿¬½À¿¹Á¦](https://www.chromatic.com/blog/graphql-react-tutorial-part-1-6/)
 
-### `npm run eject`
+```
+# Reuse stylesheet
+npx degit chromaui/learnstorybook-code/src/style src/style
 
-**Note: this is a one-way operation. Once you `eject`, you canâ€™t go back!**
-
-If you arenâ€™t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point youâ€™re on your own.
-
-You donâ€™t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldnâ€™t feel obligated to use this feature. However we understand that this tool wouldnâ€™t be useful if you couldnâ€™t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Add assets
+npx degit chromaui/learnstorybook-code/src/assets/font src/assets/font
+npx degit chromaui/learnstorybook-code/src/assets/icon src/assets/icon
+```
