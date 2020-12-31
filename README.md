@@ -40,6 +40,10 @@ npx degit chromaui/learnstorybook-code/src/style src/style
 # Add assets
 npx degit chromaui/learnstorybook-code/src/assets/font src/assets/font
 npx degit chromaui/learnstorybook-code/src/assets/icon src/assets/icon
+
+# Storybook-less-loader
+npm i storybook-less-loader less-loader less
+
 ```
 
 ## 2. Simple component(간단한 컴포넌트)
