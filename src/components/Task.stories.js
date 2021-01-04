@@ -2,6 +2,7 @@ import React from 'react';
 
 import Task from './Task';
 
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   component: Task,
   title: 'Task',

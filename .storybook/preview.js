@@ -1,5 +1,5 @@
 
-import '../src/style/index.less';
+import '../src/index.css';
 
 // Configures Storybook to log the actions(onArchiveTask and onPinTask) in the UI.
 export const parameters = {
