@@ -1115,11 +1115,15 @@ a:focus {
 }
 
 .list-item:hover {
-  background-image: linear-gradient(to bottom, #d7d7d7 0%, #e6e6e6 100%);
+  background: #d7d7d7;
 }
 
 .list-item:hover .checkbox {
   cursor: pointer;
+}
+
+.list-item:hover input {
+  color: #000;
 }
 
 .list-item+.list-item {

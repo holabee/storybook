@@ -9,6 +9,9 @@ export default {
   component: TaskList,
   title: 'TaskList',
   decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
+  // 데코레이터(decorators)는 스토리에 임의의 wrapper 를 제공하는 방법
+  // 키를 사용하여 기본 내보내기에서 렌더링된 컴포넌트에 padding 을 추가
+  // 데코레이터는 providers(react context를 설정하는 라이브러리 컴포넌트)에 스토리를 감싸 줄 때 사용할 수 있다.
 };
 
 const Template = args => <TaskList {...args} />;
